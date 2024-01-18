@@ -181,7 +181,6 @@ button {
   }
 }
 .footer {
-  /* TODO: rEPENSAR ESTILOS DEL FOOTER PARA QUE NO CREZCA TANTO EN PANTALLAS GRANDES */
   position: fixed;
   display: flex;
   flex-direction: column;
