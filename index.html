@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body class="body dark-mode">
+    <header class="header">
+        <button class="header__themeBtn" id="themeBtn" type="button">
+            <img class="header__themeBtn__img d-none" src="https://www.svgrepo.com/show/529971/sun-2.svg"
+                alt="Light Theme">
+            <img class="header__themeBtn__img" src="https://www.svgrepo.com/show/529732/moon-stars.svg"
+                alt="Dark Theme">
+        </button>
+    </header>
+    <main class="main">
+        <div class="main__latestContainer">
+            <div class="main__latestContainer-div">
+                <img class="latestContainer-div__img" src="img/paper.png" alt="">
+            </div>
+            <div class="main__latestContainer-div">
+                <img class="latestContainer-div__img" src="img/paper.png" alt="">
+            </div>
+            <div class="main__latestContainer-div">
+                <img class="latestContainer-div__img" src="img/scissors.png" alt="">
+            </div>
+            <div class="main__latestContainer-div">
+                <img class="latestContainer-div__img" src="img/paper.png" alt="">
+            </div>
+            <div class="main__latestContainer-div">
+                <img class="latestContainer-div__img" src="img/scissors.png" alt="">
+            </div>
+        </div>
+        <div class="main__currentPick-div">
+            <img class="currentPick-div__img" src="img/scissors.png" alt="Current Pick">
+        </div>
+        <section class="main__scoreboard">
+            <div class="scoreboard__display">
+                <p class="scoreboard__display__counter">12</p>
+            </div>
+            <hr class="scoreboard__divider">
+            </hr>
+            <div class="scoreboard__display">
+                <p class="scoreboard__display__counter">11</p>
+            </div>
+        </section>
+        <div class="main__currentPick-div">
+            <img class="currentPick-div__img" src="img/scissors.png" alt="Current Pick">
+        </div>
+        <div class="main__resultDiv">
+            <h2 class="resultDiv__h2 draw">It's a draw! :|</h2>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__buttonsDiv">
+            <button class="footer__buttonsDiv__btn" type="button">
+                <img class="buttonsDiv__btn__img" src="img/rock.png" alt="Rock">
+            </button>
+            <button class="footer__buttonsDiv__btn" type="button">
+                <img class="buttonsDiv__btn__img" src="img/paper.png" alt="Paper">
+            </button>
+            <button class="footer__buttonsDiv__btn" type="button">
+                <img class="buttonsDiv__btn__img" src="img/scissors.png" alt="Scisssors">
+            </button>
+        </div>
+        <button class="resetBtn" type="button">
+            <img class="resetBtn__img" src="https://www.svgrepo.com/show/529810/restart.svg" alt="Reset">
+            <p class="resetBtn__p">Reset Game</p>
+        </button>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
