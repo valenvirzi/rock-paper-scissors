@@ -57,11 +57,6 @@ li {
   text-wrap: pretty;
 }
 
-* {
-  & .d-none {
-    display: none;
-  }
-}
 button {
   background-color: #a7c957;
 
@@ -76,7 +71,7 @@ button {
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
-  padding: clamp(1rem, 5vw, 2rem);
+  padding: clamp(1rem, 5vw, 1.8rem);
   background-color: #f2e8cf;
 
   &.dark-mode {
@@ -165,7 +160,7 @@ button {
   border: none;
   border-top: solid 5px #ffffff;
 }
-.main__resultDiv {
+.resultDiv {
   .resultDiv__h2 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -181,6 +176,7 @@ button {
   }
 }
 .footer {
+  height: 18dvh;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -226,5 +222,35 @@ button {
   .resetBtn__p {
     font-size: 1.25rem;
     font-weight: 600;
+  }
+}
+.d-none {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  .resultDiv {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+  }
+  .footer {
+    width: 20vw;
+    height: 100%;
+    max-height: 100vh;
+    left: 0;
+    justify-content: space-around;
+    row-gap: 2rem;
+  }
+  .footer__buttonsDiv {
+    position: static;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 1rem;
+    padding: 1.5rem;
+  }
+  .footer__buttonsDiv__btn {
+    max-width: clamp(2.5rem, 15vh, 10rem);
+    max-height: clamp(2.5rem, 15vh, 10rem);
   }
 }
