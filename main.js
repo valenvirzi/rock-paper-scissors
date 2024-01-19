@@ -26,7 +26,15 @@ let latestChoices = [];
 let userScore = 0;
 let PCScore = 0;
 
-function storeLatestChoices() {}
+function storeLatestChoices() {
+  latestChoices.push;
+}
+
+function updateDisplay(PCChoice, userChoice) {
+  displayPick(PCChoice, currentPickPC);
+  displayPick(userChoice, currentPickUser);
+  getOutcome(userChoice, PCChoice);
+}
 
 function displayPick(choice, element) {
   switch (choice) {
@@ -119,23 +127,17 @@ function restartGame() {
 btnRock.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  displayPick(PCChoice, currentPickPC);
-  displayPick(userChoice, currentPickUser);
-  getOutcome(userChoice, PCChoice);
+  updateDisplay(PCChoice, userChoice);
 });
 btnPaper.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  displayPick(PCChoice, currentPickPC);
-  displayPick(userChoice, currentPickUser);
-  getOutcome(userChoice, PCChoice);
+  updateDisplay(PCChoice, userChoice);
 });
 btnScissors.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  displayPick(PCChoice, currentPickPC);
-  displayPick(userChoice, currentPickUser);
-  getOutcome(userChoice, PCChoice);
+  updateDisplay(PCChoice, userChoice);
 });
 btnRestart.addEventListener("pointerdown", (e) => {
   restartGame();

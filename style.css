@@ -130,7 +130,7 @@ button {
   }
 }
 .main__scoreboard {
-  width: clamp(15rem, 55vw, 20rem);
+  width: clamp(15rem, 55vw, 70%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -151,7 +151,7 @@ button {
   padding: 0.3rem;
   background-color: #6a994e;
   .scoreboard__display__counter {
-    font-size: 2.15rem;
+    font-size: 4rem;
     font-weight: 600;
   }
 }
