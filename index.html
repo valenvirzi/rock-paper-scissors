@@ -43,40 +43,40 @@
             </div>
         </div>
         <div class="main__currentPick-div">
-            <img class="currentPick-div__img" src="img/scissors.png" alt="Current Pick">
+            <img class="currentPick-div__img" id="currentPickPC" src="img/scissors.png" alt="Current Pick">
         </div>
         <section class="main__scoreboard">
             <div class="scoreboard__display">
-                <p class="scoreboard__display__counter">12</p>
+                <p class="scoreboard__display__counter" id="scoreUser">12</p>
             </div>
             <hr class="scoreboard__divider">
             </hr>
             <div class="scoreboard__display">
-                <p class="scoreboard__display__counter">11</p>
+                <p class="scoreboard__display__counter" id="scorePC">11</p>
             </div>
         </section>
         <div class="main__currentPick-div">
-            <img class="currentPick-div__img" src="img/scissors.png" alt="Current Pick">
+            <img class="currentPick-div__img" id="currentPickUser" src="img/scissors.png" alt="Current Pick">
         </div>
     </main>
     <div class="resultDiv">
-        <h2 class="resultDiv__h2 draw">It's a draw! :|</h2>
+        <h2 class="resultDiv__h2 draw" id="roundOutcome">It's a draw! :|</h2>
     </div>
     <footer class="footer">
         <div class="footer__buttonsDiv">
-            <button class="footer__buttonsDiv__btn" type="button">
+            <button class="footer__buttonsDiv__btn" id="btnRock" type="button">
                 <img class="buttonsDiv__btn__img" src="img/rock.png" alt="Rock">
             </button>
-            <button class="footer__buttonsDiv__btn" type="button">
+            <button class="footer__buttonsDiv__btn" id="btnPaper" type="button">
                 <img class="buttonsDiv__btn__img" src="img/paper.png" alt="Paper">
             </button>
-            <button class="footer__buttonsDiv__btn" type="button">
+            <button class="footer__buttonsDiv__btn" id="btnScissors" type="button">
                 <img class="buttonsDiv__btn__img" src="img/scissors.png" alt="Scisssors">
             </button>
         </div>
-        <button class="resetBtn" type="button">
+        <button class="resetBtn" id="btnRestart" type="button">
             <img class="resetBtn__img" src="https://www.svgrepo.com/show/529810/restart.svg" alt="Reset">
-            <p class="resetBtn__p">Reset Game</p>
+            <p class="resetBtn__p">Restart Game</p>
         </button>
     </footer>
     <script src="main.js"></script>
