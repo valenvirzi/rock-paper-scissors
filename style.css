@@ -207,8 +207,8 @@ button {
   border: none;
   border-radius: 50%;
   overflow: hidden;
-  max-width: clamp(2.5rem, 100%, 5rem);
-  max-height: clamp(2.5rem, 100%, 5rem);
+  max-width: clamp(2.5rem, 1fr, 5rem);
+  max-height: clamp(2.5rem, 1fr, 5rem);
   .buttonsDiv__btn__img {
   }
 }
