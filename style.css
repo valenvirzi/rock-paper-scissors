@@ -71,8 +71,9 @@ button {
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
-  padding: clamp(1rem, 5vw, 1.8rem);
+  padding: clamp(1rem, 5vw, 1.5rem);
   background-color: #f2e8cf;
+  max-height: 100dvh;
 
   &.dark-mode {
     background-color: #6d695e;
@@ -94,7 +95,7 @@ button {
   }
 }
 .main {
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +103,7 @@ button {
   row-gap: 1.8dvh;
 }
 .main__latestContainer {
-  width: clamp(20rem, 70vw, 30rem);
+  width: clamp(20rem, 70vw, 35rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,7 +131,7 @@ button {
   }
 }
 .main__scoreboard {
-  width: clamp(15rem, 45vw, 20rem);
+  width: clamp(15rem, 55vw, 20rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -161,18 +162,18 @@ button {
   border-top: solid 5px #ffffff;
 }
 .resultDiv {
-  .resultDiv__h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    &.won {
-      color: #a7c957;
-    }
-    &.lost {
-      color: #bc4749;
-    }
-    &.draw {
-      color: #1cb2e4;
-    }
+}
+.resultDiv__h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  &.won {
+    color: #a7c957;
+  }
+  &.lost {
+    color: #bc4749;
+  }
+  &.draw {
+    color: #1cb2e4;
   }
 }
 .footer {
