@@ -258,6 +258,7 @@ button {
 }
 @media only screen and (max-width: 1099px) {
   .main {
-    min-height: 65vh;
+    padding-top: 1.5rem;
+    min-height: 55vh;
   }
 }
