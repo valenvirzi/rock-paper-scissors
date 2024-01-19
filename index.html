@@ -25,7 +25,7 @@
         </button>
     </header>
     <main class="main">
-        <div class="main__latestContainer">
+        <div class="main__latestContainer" id="containerLatestChoices">
             <div class="main__latestContainer-div">
                 <img class="latestContainer-div__img" src="img/paper.png" alt="">
             </div>
@@ -43,35 +43,35 @@
             </div>
         </div>
         <div class="main__currentPick-div">
-            <img class="currentPick-div__img" id="currentPickPC" src="img/scissors.png" alt="Current Pick">
+            <img class="currentPick-div__img" id="currentPickPC" src="" alt="Current Pick">
         </div>
         <section class="main__scoreboard">
             <div class="scoreboard__display">
-                <p class="scoreboard__display__counter" id="scoreUser">12</p>
+                <p class="scoreboard__display__counter" id="scoreUser">0</p>
             </div>
             <hr class="scoreboard__divider">
             </hr>
             <div class="scoreboard__display">
-                <p class="scoreboard__display__counter" id="scorePC">11</p>
+                <p class="scoreboard__display__counter" id="scorePC">0</p>
             </div>
         </section>
         <div class="main__currentPick-div">
-            <img class="currentPick-div__img" id="currentPickUser" src="img/scissors.png" alt="Current Pick">
+            <img class="currentPick-div__img" id="currentPickUser" src="" alt="Current Pick">
         </div>
     </main>
     <div class="resultDiv">
-        <h2 class="resultDiv__h2 draw" id="roundOutcome">It's a draw! :|</h2>
+        <h2 class="resultDiv__h2 draw" id="roundOutcome"></h2>
     </div>
     <footer class="footer">
         <div class="footer__buttonsDiv">
             <button class="footer__buttonsDiv__btn" id="btnRock" type="button">
-                <img class="buttonsDiv__btn__img" src="img/rock.png" alt="Rock">
+                <img class="buttonsDiv__btn__img" id="Rock" src="img/rock.png" alt="Rock">
             </button>
             <button class="footer__buttonsDiv__btn" id="btnPaper" type="button">
-                <img class="buttonsDiv__btn__img" src="img/paper.png" alt="Paper">
+                <img class="buttonsDiv__btn__img" id="Paper" src="img/paper.png" alt="Paper">
             </button>
             <button class="footer__buttonsDiv__btn" id="btnScissors" type="button">
-                <img class="buttonsDiv__btn__img" src="img/scissors.png" alt="Scisssors">
+                <img class="buttonsDiv__btn__img" id="Scissors" src="img/scissors.png" alt="Scisssors">
             </button>
         </div>
         <button class="resetBtn" id="btnRestart" type="button">
