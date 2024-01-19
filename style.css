@@ -235,6 +235,12 @@ button {
       max-width: clamp(4rem, 35vw, 10rem);
     }
   }
+  .scoreboard__display {
+    .scoreboard__display__counter {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  }
   .resultDiv {
     position: absolute;
     top: 45%;
