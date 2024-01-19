@@ -219,7 +219,7 @@ button {
   padding: 0.5rem;
 
   .resetBtn__img {
-    max-width: clamp(2rem, 10vw, 4.5rem);
+    width: clamp(2rem, 10vw, 4.5rem);
   }
   .resetBtn__p {
     font-size: 1.8rem;
