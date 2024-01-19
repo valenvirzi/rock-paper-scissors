@@ -229,7 +229,7 @@ button {
   display: none;
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1100px) {
   .resultDiv {
     position: absolute;
     top: 45%;
