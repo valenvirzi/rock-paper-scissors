@@ -69,7 +69,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   padding: clamp(1rem, 5vw, 1.5rem);
   background-color: #f2e8cf;
   max-height: 100dvh;
@@ -99,7 +99,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  row-gap: 2dvh;
+  row-gap: 1.8dvh;
 }
 .main__latestContainer {
   width: clamp(20rem, 70vw, 35rem);
