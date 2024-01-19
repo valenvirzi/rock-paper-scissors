@@ -256,3 +256,8 @@ button {
     max-height: clamp(2.5rem, 15vh, 10rem);
   }
 }
+@media only screen and (max-width: 1099px) {
+  .main {
+    min-height: 65vh;
+  }
+}
