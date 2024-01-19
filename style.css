@@ -261,4 +261,9 @@ button {
     padding-top: 1.5rem;
     min-height: 55vh;
   }
+  .main__currentPick-div {
+    .currentPick-div__img {
+      width: 30vw;
+    }
+  }
 }
