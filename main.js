@@ -25,6 +25,8 @@ const btnRestart = document.getElementById("btnRestart");
 let userScore = 0;
 let PCScore = 0;
 
+function storeLatestChoices() {}
+
 function displayPick(choice, element) {
   switch (choice) {
     case "Rock":

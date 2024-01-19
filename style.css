@@ -20,7 +20,6 @@
 /* dark mode user-agent-styles */
 /* improves punctuation in supported browsers */
 html {
-  color-scheme: dark light;
   hanging-punctuation: first last;
 }
 
@@ -279,5 +278,8 @@ button {
     .currentPick-div__img {
       width: 30vw;
     }
+  }
+  .resultDiv__h2 {
+    font-size: 3.5rem;
   }
 }
