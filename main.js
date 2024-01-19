@@ -112,8 +112,8 @@ function restartGame() {
   PCScore = 0;
   scoreUser.textContent = userScore;
   scorePC.textContent = PCScore;
-  roundOutcome.textContent = "Let's play";
   roundOutcome.classList.remove("draw", "lost", "won");
+  roundOutcome.textContent = "Let's play";
 }
 
 btnRock.addEventListener("pointerdown", (e) => {
