@@ -111,30 +111,35 @@ function makeChoicePC() {
 }
 
 function getOutcome(choiceUser, choicePC) {
-  if (choiceUser == choicePC) {
-    roundOutcome.textContent = "It's a draw :|";
-    roundOutcome.classList.remove("won", "lost");
-    roundOutcome.classList.add("draw");
-  } else if (
-    (choiceUser == "Rock" && choicePC == "Paper") ||
-    (choiceUser == "Paper" && choicePC == "Scissors") ||
-    (choiceUser == "Scissors" && choicePC == "Rock")
-  ) {
-    roundOutcome.textContent = "You lose :(";
-    roundOutcome.classList.remove("won", "draw");
-    roundOutcome.classList.add("lost");
-    ++PCScore;
-    scorePC.textContent = PCScore;
-  } else if (
-    (choicePC == "Rock" && choiceUser == "Paper") ||
-    (choicePC == "Paper" && choiceUser == "Scissors") ||
-    (choicePC == "Scissors" && choiceUser == "Rock")
-  ) {
-    roundOutcome.textContent = "You win :)";
-    roundOutcome.classList.remove("draw", "lost");
-    roundOutcome.classList.add("won");
-    ++userScore;
-    scoreUser.textContent = userScore;
+  if (choiceUser !== undefined && choicePC !== undefined) {
+    if (choiceUser == choicePC) {
+      roundOutcome.textContent = "It's a draw :|";
+      roundOutcome.classList.remove("won", "lost");
+      roundOutcome.classList.add("draw");
+    } else if (
+      (choiceUser == "Rock" && choicePC == "Paper") ||
+      (choiceUser == "Paper" && choicePC == "Scissors") ||
+      (choiceUser == "Scissors" && choicePC == "Rock")
+    ) {
+      roundOutcome.textContent = "You lose :(";
+      roundOutcome.classList.remove("won", "draw");
+      roundOutcome.classList.add("lost");
+      ++PCScore;
+      scorePC.textContent = PCScore;
+    } else if (
+      (choicePC == "Rock" && choiceUser == "Paper") ||
+      (choicePC == "Paper" && choiceUser == "Scissors") ||
+      (choicePC == "Scissors" && choiceUser == "Rock")
+    ) {
+      roundOutcome.textContent = "You win :)";
+      roundOutcome.classList.remove("draw", "lost");
+      roundOutcome.classList.add("won");
+      ++userScore;
+      scoreUser.textContent = userScore;
+    }
+  } else {
+    roundOutcome.classList.remove("draw", "lost", "won");
+    roundOutcome.textContent = "Let's play!";
   }
 }
 
@@ -145,8 +150,6 @@ function restartGame() {
   scoreUser.textContent = userScore;
   scorePC.textContent = PCScore;
   updateDisplay(undefined, undefined, latestChoices);
-  roundOutcome.classList.remove("draw", "lost", "won");
-  roundOutcome.textContent = "Let's play!";
 }
 
 btnRock.addEventListener("pointerdown", (e) => {
