@@ -164,7 +164,7 @@ button {
 .resultDiv {
 }
 .resultDiv__h2 {
-  font-size: 2.5rem;
+  font-size: 2.85rem;
   font-weight: 600;
   &.won {
     color: #a7c957;
@@ -219,10 +219,10 @@ button {
   padding: 0.5rem;
 
   .resetBtn__img {
-    width: clamp(2rem, 10vw, 4.5rem);
+    width: clamp(2rem, 15vw, 5rem);
   }
   .resetBtn__p {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
   }
 }
