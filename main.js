@@ -22,6 +22,7 @@ const btnRock = document.getElementById("btnRock");
 const btnPaper = document.getElementById("btnPaper");
 const btnScissors = document.getElementById("btnScissors");
 const btnRestart = document.getElementById("btnRestart");
+let latestChoices = [];
 let userScore = 0;
 let PCScore = 0;
 
@@ -111,6 +112,8 @@ function restartGame() {
   PCScore = 0;
   scoreUser.textContent = userScore;
   scorePC.textContent = PCScore;
+  roundOutcome.textContent = "Let's play";
+  roundOutcome.classList.remove("draw", "lost", "won");
 }
 
 btnRock.addEventListener("pointerdown", (e) => {
