@@ -13,6 +13,9 @@
 const containerLatestChoices = document.getElementById(
   "containerLatestChoices"
 );
+const latestChoicesImages = document.querySelectorAll(
+  ".latestContainer-div__img"
+);
 const currentPickPC = document.getElementById("currentPickPC");
 const currentPickUser = document.getElementById("currentPickUser");
 const scoreUser = document.getElementById("scoreUser");
@@ -22,18 +25,40 @@ const btnRock = document.getElementById("btnRock");
 const btnPaper = document.getElementById("btnPaper");
 const btnScissors = document.getElementById("btnScissors");
 const btnRestart = document.getElementById("btnRestart");
-let latestChoices = [];
+let latestChoices = [undefined, undefined, undefined, undefined, undefined];
 let userScore = 0;
 let PCScore = 0;
 
-function storeLatestChoices() {
-  latestChoices.push;
+function storeLatestChoices(latestChoices, PCChoice) {
+  latestChoices.pop();
+  latestChoices.unshift(PCChoice);
+  console.log(latestChoices);
 }
 
-function updateDisplay(PCChoice, userChoice) {
+function displayLatestChoices(latestChoices) {
+  let counter = 0;
+  latestChoices.reverse();
+  latestChoices.forEach((pick) => {
+    if (pick === undefined) {
+      latestChoicesImages[counter].setAttribute(
+        "src",
+        `https://www.svgrepo.com/show/458579/cancel.svg`
+      );
+    } else {
+      let routeName = pick.toLowerCase();
+      latestChoicesImages[counter].setAttribute("src", `img/${routeName}.png`);
+    }
+    counter++;
+  });
+  latestChoices.reverse();
+}
+
+function updateDisplay(PCChoice, userChoice, latestChoices) {
   displayPick(PCChoice, currentPickPC);
   displayPick(userChoice, currentPickUser);
   getOutcome(userChoice, PCChoice);
+  storeLatestChoices(latestChoices, PCChoice);
+  displayLatestChoices(latestChoices);
 }
 
 function displayPick(choice, element) {
@@ -114,30 +139,30 @@ function getOutcome(choiceUser, choicePC) {
 }
 
 function restartGame() {
-  displayPick(undefined, currentPickPC);
-  displayPick(undefined, currentPickUser);
+  latestChoices = [undefined, undefined, undefined, undefined, undefined];
   userScore = 0;
   PCScore = 0;
   scoreUser.textContent = userScore;
   scorePC.textContent = PCScore;
   roundOutcome.classList.remove("draw", "lost", "won");
   roundOutcome.textContent = "Let's play!";
+  updateDisplay(undefined, undefined, latestChoices);
 }
 
 btnRock.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  updateDisplay(PCChoice, userChoice);
+  updateDisplay(PCChoice, userChoice, latestChoices);
 });
 btnPaper.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  updateDisplay(PCChoice, userChoice);
+  updateDisplay(PCChoice, userChoice, latestChoices);
 });
 btnScissors.addEventListener("pointerdown", (e) => {
   let userChoice = makeChoiceUser(e);
   let PCChoice = makeChoicePC();
-  updateDisplay(PCChoice, userChoice);
+  updateDisplay(PCChoice, userChoice, latestChoices);
 });
 btnRestart.addEventListener("pointerdown", (e) => {
   restartGame();
